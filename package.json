@@ -6,7 +6,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test -sm=false --single-run",
+    "test-dev": "ng test -sm=false",
+    "test-coverage": "ng test -sm=false --single-run --cc",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
