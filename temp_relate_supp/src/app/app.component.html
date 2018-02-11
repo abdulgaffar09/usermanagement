@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-side-pan></app-side-pan>
+<form>
+  <input type="file" value="" (change)="uploadFile($event)"/>
+</form>
+<span *ngFor="let users of usersFromCSV">
+{{users.login_name}}
+</span>
+<app-users></app-users>
