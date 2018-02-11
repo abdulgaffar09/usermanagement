@@ -1,0 +1,39 @@
+Mandatory          Unique Id,Mandatory,Mandatory,Mandatory,Mandatory,Mandatory,Mandatory,Optional
+customer_id,login_name,login_password,first_name,last_name,voice_name,ptt_name,roles 
+1,alekhya,bd017e161070f395bb99ff3b54141f30a0016e84d40662e52ba8e8738d9744de,alekhya,nair,ceovoice,ceoptt,"Truck driver, Janitor, Ceo"
+2,iouri2,daeddeec1b047d13051f3abd2a2b145f4d384c74a9955825183fb3345e3283c8,iouri,tarsounov,presidentvoice,presidentvoice,"Janitor, Ceo, Clerk"
+3,vladtest,9340174973096fec47ff6ea1aa2e187b9015cabe4d92cd406d7c70bf166c9998,vlad,koval,ceovoice,ceoptt,Major
+4,test,768871b23ed24b1c9743f71f0be58857176f7393b456ebf0aa57503dd0e20c5e,alekhya,nair,janitorvoice,janitorptt,"Clerk, Janitor"
+5,test2,89a50aec0d362359fee5a8a8e759c1bfbaf2de37dbb8376f036ac04c2e26db08,alekhya,nair,truckdrivervoice,truckdriverptt,"Clerk, Secretary, Manager"
+6,test3,fffdb3d03f2c131eb7b5d55492036483751eb6b85c88f7cf93b2d0a2a85a288d,Vlad,koval,majorvoice,majorptt,"Major, Governor, Ceo"
+1,Iouri,477eb8670ddfcd05d9df2be7b31376dc624588256b29c2212aae85b3dff6d953,Iouri,Tarsonov,IouriVoice,IouriPtt,"Ceo, Manager, Truck driver, Janitor"
+2,Vladtest1,37d83c57db8d7052e064a337fde84fd93ae6fe77161161f9e870538b574f80a2,Vlad,Koval,VladVoice,VladPtt,"Governor, Major, Clerk, Secretary"
+1,hong,c1d4153a684f859e2fd687f596eb6c4fe56952fa3db7c92937aa3470a380a579,Hong,Zebra,1060,HongPtt,HongPresident
+1,leo,1a4ef7932c277528e3c9613bb034729bdcf476a7a269713dd5a1c295711f23d9,Leo,Zebra,1051,LeoPtt,Leo
+1,virgo,aa4322c25d55d9ec3c8d8e96d5fd5f07a2fa0c249eca5798f6109af7349b9ede,Virgo,Zebra,1052,VirgoPtt,Virgo
+1,libra,e41fb61f995a93b7593ea544672b52c4143c861a06c17d606923af6eb4611f08,Libra,XYZ,1053,LibraPtt,Libra
+1,gemini,9c98a3f1f8b00e96d0f2d88acfa56e26eefda96d6f62371e5d6690af1550590d,gemini,zebra,1054,GeminiPtt,Gemini
+1,neptune,8d5addd6ae52225a46006e5b6547b320f3a8abca2ddf8d3cd3752fa9cff5178d,Neptune,Zebra,NeptuneVoice,NeptunePtt,Neptune
+2,WVCJBD,,Terry,Crosby,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,PZCJAR,,Jack,Donnelly,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,FBRGKW,,Roosevelt,Anaya,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,JWRSYU,,Frances,Coyne,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,NJZAAA,,Maria,Brown,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,FBEFCX,,Matthew,Lopez,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,KGZLYS,,Ester,Blackwell,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,YVWGPF,,Gerald,Felker,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,OOQTCL,,Melissa,Hampton,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,PZZXCM,,Wayne,Elizondo,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,ZCONWE,,Melissa,Goldhirsh,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,MFYDPZ,,Robert,Walker,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,AKEFIY,,Helen,Aquino,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,GWBKGJ,,Caleb,Seabron,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,FSRUSS,,Janet,Williams,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,XGZDWQ,,Carolina,Bridges,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,VFBAYM,,Dana,Edwards,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,HVKCII,,Roberto,Madrid,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,FXSTTX,,Anita,Haygood,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,ALVODC,,Catherine,Bodine,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,TMJIXA,,Tom,Null,VladVoice,VladPtt,"President, Governor, Major, Clerk, Secretary"
+2,Olga,,Olga,V,Clerk,VladPtt,"Clerk, Secretary"
+1,Todd1,273aac672556c09156fb74ac29264272eb852f6372eba995ed9e59c8f853270a,todd,Zebra,1061,ToddPtt,"ToddSecretary, ToddAdmin"
