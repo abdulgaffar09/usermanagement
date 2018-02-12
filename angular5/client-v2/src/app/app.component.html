@@ -1,15 +1,15 @@
 <app-header></app-header>
 <div class="container-fluid mt-5">
   <div class="row" >
-    <app-side-pan class="col-xs-3"></app-side-pan>
-
+    <div class="col-xs-3"><app-side-pan></app-side-pan></div>
+    <div class="col-xs-9 mt-2"><app-users class="col-xs-9" ></app-users>
+    </div>
   </div>
 
 </div>
-<form>
+<!--<form>
   <input type="file" value="" (change)="uploadFile($event)"/>
-</form>
+</form>-->
 <span *ngFor="let users of usersFromCSV">
 {{users.login_name}}
 </span>
-<app-users class="col-xs-9" [usersFromCSV]="usersFromCSV"></app-users>
