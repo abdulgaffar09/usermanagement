@@ -1,0 +1,25 @@
+<table *ngIf="tableData">
+  <thead>
+    <th  *ngFor="let eachField of tableData.fields">
+      <span>{{eachField.label}}</span>
+    </th>
+  </thead>
+  <tbody>
+      ableData.data.length  ==>>> {{tableData.data.length }}
+    <!--//<ng-template *ngIf="tableData.data.length > 0">-->
+        <tr *ngFor="let eachData of tableData.data">
+            <td  *ngFor="let fields of tableData.fields">
+              eachField -->> {{eachField.key}}
+
+              <span>{{eachData[eachField.key]}}</span>
+            </td>
+          </tr>
+      <!--//<ng-container>-->
+
+     <!--// </ng-container>-->
+    <!--</ng-template>-->
+    <!--<ng-template *ngIf="tableData.data.length <= 0">-->
+      <label>No data to display</label>
+    <!--</ng-template>-->
+  </tbody>
+</table>
