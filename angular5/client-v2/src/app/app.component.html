@@ -1,15 +1,23 @@
 <app-header></app-header>
-<div class="container-fluid mt-5">
-  <div class="row" >
-    <div class="col-xs-3"><app-side-pan></app-side-pan></div>
-    <div class="col-xs-9 mt-2"><app-users class="col-xs-9" ></app-users>
-    </div>
-  </div>
+<div class="row mt-lg-5 mt-xl-2 mt-md-5">
+  <div class="col-xl-3 bg-white col-lg-3 side-pan"><app-side-pan></app-side-pan></div>
+  <div class="col-xl-1 col-lg-2"></div>
+  <div class="col-xl-7 col-lg-7 mt-lg-5 mt-xl-5 mt-md-5">
+    <div class="container" >
+      <div class="row">
+        <app-users class="" >
 
+        </app-users>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+
 <!--<form>
   <input type="file" value="" (change)="uploadFile($event)"/>
 </form>-->
-<span *ngFor="let users of usersFromCSV">
-{{users.login_name}}
-</span>
+<!--<span *ngFor="let users of usersFromCSV">-->
+<!--{{users.login_name}}-->
+<!--</span>-->
