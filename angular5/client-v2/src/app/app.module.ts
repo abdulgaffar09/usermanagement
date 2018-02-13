@@ -20,7 +20,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
   url: 'https://httpbin.org/post',
   maxFilesize: 50,
-  acceptedFiles: 'text/csv'
+  acceptedFiles: 'text/*'
 };
 
 

@@ -16,14 +16,33 @@ export class ImportMenuComponent implements OnInit {
   }
 
   uploadFile(event: any) {
-     let csv: string = event[1]['files']['file'];
-      let allTextLines = csv.split(/\r|\n|\r/);
-      let allLines = csv.split('\n');
-      let mandatoryIndicators = allTextLines[0].split(',');
-      let columnNames = allTextLines[1].split(',');
-      this.createCsvMap(mandatoryIndicators, columnNames);
-      //let csvTableData = allTextLines[3..<csvTableData.length-1];
-      this.formUsersJsonData(allTextLines);
+  if(event.length>0 ){
+  let csv: string = event[1]['files']['file'];
+        let allTextLines = csv.split(/\r|\n|\r/);
+        let allLines = csv.split('\n');
+        let mandatoryIndicators = allTextLines[0].split(',');
+        let columnNames = allTextLines[1].split(',');
+        this.createCsvMap(mandatoryIndicators, columnNames);
+        //let csvTableData = allTextLines[3..<csvTableData.length-1];
+        this.formUsersJsonData(allTextLines);
+
+  } else {
+
+      let fileReader: FileReader = new FileReader();
+            fileReader.readAsText(event['target']['files'][0]);
+            fileReader.onload = (e) => {
+              let csv: string = fileReader.result;
+              let allTextLines = csv.split(/\r|\n|\r/);
+              let allLines = csv.split('\n');
+              let mandatoryIndicators = allLines[0].split(',');
+              let columnNames = allLines[1].split(',');
+              this.csvFields = columnNames;
+              this.createCsvMap(mandatoryIndicators, columnNames);
+              //let csvTableData = allLines[3..<csvTableData.length-1];
+              this.formUsersJsonData(allLines);
+            }
+
+    }
   }
 
   /**
