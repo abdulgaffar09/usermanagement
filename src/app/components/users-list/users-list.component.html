@@ -1,12 +1,13 @@
 <ng-container>
 
-  <div class="row mt-lg-5">
+  <div class="action-panel">
 
-    <a href="#" class="col-xl-12 col-lg-12 float-right" (click)="open()">Bulk Management</a>
+    <a href="#" class="align-right" (click)="open()">Bulk Management</a>
   </div>
-  <div class="row">
+  <br>
+  <div class="table-arrange" *ngIf="tableData.data.length > 0">
 
-    <gem-common-table class="col-xl-12 col-lg-12" [tableData]="tableData"></gem-common-table>
+    <gem-common-table [tableData]="tableData"></gem-common-table>
 
   </div>
 

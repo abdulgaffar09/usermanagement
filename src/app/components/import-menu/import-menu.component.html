@@ -1,6 +1,7 @@
 <!--<ng-template>-->
 
 
+<!--
 <div class="modal-header modal-xl bg-primary">
   <h5 class="modal-title text-white">Add Bulk Users</h5>
   <button type="button" class="close" aria-label="Close" (click)="close()">
@@ -52,5 +53,25 @@
 
 
 </div>
+-->
 
 <!--</ng-template>-->
+
+<h1 mat-dialog-title>Add Bulk Users</h1>
+<div mat-dialog-content>
+
+  <!--<mat-form-field>-->
+    <!--<input matInput [(ngModel)]="">-->
+    <!--<form>-->
+
+      <input matInput type="file" value="" (change)="uploadFile($event)"/>
+  <dropzone class="dz-started" [config]="config" [message]="'Click or drag files here to upload'" (error)="onUploadError($event)" (success)="uploadFile($event)"></dropzone>
+
+  <!--</form>-->
+
+  <!--</mat-form-field>-->
+</div>
+<div mat-dialog-actions class="import-menu-actions">
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="usersFromCSV" cdkFocusInitial>Ok</button>
+</div>

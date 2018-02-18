@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {UsersListService} from './users-list.service';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {ImportMenuComponent} from '../import-menu/import-menu.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'gem-users-list',
@@ -10,11 +11,12 @@ import {ImportMenuComponent} from '../import-menu/import-menu.component';
 })
 
 export class UsersListComponent implements OnInit {
-
+  animal: string; name: string;
   tableData: any = {};
   users: any = [];
   usersFromCSV: any = [];
-  constructor(private usersListService: UsersListService,private modalService: NgbModal) { }
+  constructor(private usersListService: UsersListService,private modalService: NgbModal,
+              public dialog: MatDialog) { }
 
 
   ngOnInit() {
@@ -48,19 +50,32 @@ export class UsersListComponent implements OnInit {
         {label: 'Voice Name', key: 'voice_name'},
         {label: 'Role', key: 'roles'}
       ],
-      data: this.users.length>0? this.users : this.usersFromCSV
+      data: this.users && this.users.length>0? this.users : this.usersFromCSV
     };
     console.log(' tableData ', this.tableData);
   }
   open() {
-    const modalRef = this.modalService.open(ImportMenuComponent,{windowClass:'lg',size:'lg'});
+   /* const modalRef = this.modalService.open(ImportMenuComponent,{windowClass:'lg',size:'lg'});
     modalRef.componentInstance.name = 'importMenu';
     modalRef.result.then((data) => {
       this.users = data;
       this.formTableData();
     }).catch((error) => {
       console.log("error catched here please check ",error);
-    })
+    })*/
+
+    const dialogRef = this.dialog.open(ImportMenuComponent, {
+      width: '500px',
+      height:'400px',
+      data: {name:this.name, animal:this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.users = result;
+      this.formTableData();
+
+    });
   }
 }
 

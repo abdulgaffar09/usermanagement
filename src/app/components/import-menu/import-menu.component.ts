@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'gem-import-menu',
@@ -11,7 +12,11 @@ export class ImportMenuComponent implements OnInit {
   usersFromCSV: any = [];
   csvColumnFieldsMap: any = {};
   csvFields: any = [];
-  constructor(private modalService: NgbModal,private activeModal: NgbActiveModal) { }
+  constructor(    public dialogRef: MatDialogRef<ImportMenuComponent>,
+                  @Inject(MAT_DIALOG_DATA) public data: any) {
+    // dialogRef.disableClose = true;
+
+  }
 
   ngOnInit() {
   }
@@ -101,14 +106,23 @@ export class ImportMenuComponent implements OnInit {
       this.usersFromCSV = usersList;
     }
   }
+
+  onNoClick(): void {
+    this.dialogRef.close(this.usersFromCSV);
+  }
   onUploadError(event: any){
-    this.activeModal.dismiss(event['target']['error ']);
+    // this.activeModal.dismiss(event['target']['error ']);
+    this.dialogRef.close();
+
   }
   close(){
-    this.activeModal.dismiss("closed");
+    // this.activeModal.dismiss("closed");
+    this.dialogRef.close();
 
   }
   submit(){
-    this.activeModal.close(this.usersFromCSV);
+    // this.activeModal.close(this.usersFromCSV);
+    this.dialogRef.close();
+
   }
 }
