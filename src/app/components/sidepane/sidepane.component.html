@@ -1,0 +1,27 @@
+
+       <ng-container>
+
+          <mat-sidenav-container class="example-container">
+            <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+              <section class="side-nav-item" ngClass="side-nav-item"><a href='portal users'> Portal Users</a></section>
+
+                <section class="side-nav-item "><a class="active-side-nav" href='device users'> Device Users</a></section>
+            </mat-sidenav>
+
+            <mat-sidenav-content class="mat-body mat-mat">
+              <div class="router-body">
+                <mat-toolbar mat-colors="white" class="mat-elevation-z5">
+                  <a class="selected-nav-users" mat-button>User List</a>
+                  <a mat-button>Group</a>
+                </mat-toolbar>
+                <router-outlet></router-outlet>
+              </div>
+
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+
+        </ng-container>
+
+       <!--<section><a href='portal users'> Portal Users</a></section>-->
+
+       <!--<section><a href='device users'> Device Users</a></section>-->
