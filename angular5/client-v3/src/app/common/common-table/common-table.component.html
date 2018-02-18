@@ -1,0 +1,31 @@
+<ng-container class="ml-5 float-right">
+  <span class="ml-5 bg-white">
+    {{tableData.title}}
+  </span>
+  <table class="table table-bordered ml-5" *ngIf="tableData">
+    <thead>
+    <th *ngIf="tableData.selectAll">
+      <input type="checkbox" value="tableData.selectAll"/>
+    </th>
+    <th  *ngFor="let eachField of tableData.fields">
+      <span>{{eachField.label}}</span>
+    </th>
+    </thead>
+    <tbody>
+    <ng-template [ngIf]="tableData.data.length > 0">
+      <tr *ngFor="let eachData of tableData.data">
+        <td *ngIf="tableData.selectAll">
+          <input type="checkbox" value="eachData.select"/>
+        </td>
+        <td  *ngFor="let eachField of tableData.fields">
+          <!--eachField &ndash;&gt;> {{eachField.key}}-->
+          <span>{{eachData[eachField.key]}}</span>
+        </td>
+      </tr>
+    </ng-template>
+    </tbody>
+  </table>
+  <ng-template [ngIf]="tableData.data.length <= 0">
+    <strong>No users to display</strong>
+  </ng-template>
+</ng-container>

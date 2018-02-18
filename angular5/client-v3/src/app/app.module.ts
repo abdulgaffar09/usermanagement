@@ -15,14 +15,12 @@ import { UsersService } from './users/users.service';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
-import { NgxUploaderComponent, NgxUploderModule } from 'ngxuploader';
-import { UploaderService } from 'ngxuploader';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
   url: 'https://httpbin.org/post',
   maxFilesize: 50,
-  acceptedFiles: 'text/cvs'
+  acceptedFiles: 'text/csv'
 };
 
 
@@ -33,15 +31,13 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     HeaderComponent,
     UsersComponent,
     SidePanComponent,
-    CommonTableComponent
+    CommonTableComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    DropzoneModule,
-    NgxUploderModule
-
+    DropzoneModule
   ],
   entryComponents: [ImportMenuComponent],
   providers: [
@@ -50,8 +46,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     {
       provide: DROPZONE_CONFIG,
       useValue: DEFAULT_DROPZONE_CONFIG
-    },
-    UploaderService
+    }
   ],
   bootstrap: [AppComponent]
 })
